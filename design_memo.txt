@@ -1,0 +1,11 @@
+# Hospital Intake System Design Memo
+
+The hospital intake system uses a binary tree and a min-heap to organize doctors and emergency patients. These data structures help the hospital manage information and make important decisions.
+
+A binary tree is appropriate for the doctor structure because doctors can have other doctors reporting to them. Each doctor can have a left and right child. This makes it easier to represent the hospital's management structure. The tree also allows the system to search for doctors and display the reporting structure.
+
+Preorder, inorder, and postorder traversals are useful for different situations. Preorder visits the doctor first and then their children. A software engineer could use preorder to create a report that shows managers before the doctors reporting to them. Inorder visits the left child, the doctor, and then the right child. This can help display information in a specific order. Postorder visits the children before the doctor. This could be useful when processing information from lower-level doctors before their managers.
+
+A min-heap is useful for emergency intake because patients should not always be treated in the order they arrive. Instead, the hospital needs to treat the most urgent patients first. Each patient receives an urgency number from 1 to 10. The patient with the lowest number has the highest priority. When a new patient arrives, the heap reorganizes itself to maintain the correct priority. When a patient is removed, the heap also restores its order.
+
+These data structures help make the hospital system organized and efficient. The binary tree manages doctor relationships, while the min-heap helps emergency staff select the next patient based on urgency. Together, they support better organization and faster access to important information.
